@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VCB Private Banking — Tagline Master List</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f8f5; color: #1a1a1a; }
+.page { max-width: 1000px; margin: 0 auto; padding: 3rem 1.75rem 6rem; }
+
+.header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e5e5de; }
+.eye { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: #bbb; margin-bottom: 0.5rem; }
+h1 { font-family: Georgia, serif; font-size: 25px; color: #1a1a1a; font-weight: normal; margin-bottom: 0.4rem; }
+.sub { font-size: 13px; color: #aaa; font-style: italic; }
+
+/* BENCHMARK SECTION */
+.bench-section { margin-bottom: 3rem; }
+.bs-head { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #bbb; margin-bottom: 0.4rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid #e5e5de; margin-bottom: 1rem; }
+.bench-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #e5e5de; border-radius: 10px; overflow: hidden; }
+.bcard { background: #fff; padding: 1rem 1.1rem; }
+.bcard.saturated { background: #fafaf5; }
+.bc-bank { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: #555; margin-bottom: 0.25rem; text-transform: uppercase; }
+.bc-tag { font-family: Georgia, serif; font-size: 14px; color: #1a1a1a; line-height: 1.4; margin-bottom: 0.3rem; font-style: italic; }
+.bc-note { font-size: 11px; color: #bbb; line-height: 1.5; }
+.bc-verdict { display: inline-flex; font-size: 10px; padding: 0.1rem 0.5rem; border-radius: 10px; margin-top: 0.4rem; }
+.v-sat { background: #f0f0eb; color: #aaa; }
+.v-gap { background: #1a1a1a; color: #fff; }
+
+/* TOOLBAR */
+.toolbar { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; margin-bottom: 1.4rem; }
+.tl { font-size: 11px; color: #bbb; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 2px; }
+.fb { font-size: 11px; padding: 0.32rem 0.82rem; border-radius: 20px; border: 0.5px solid #ddd; background: #fff; cursor: pointer; color: #888; transition: all 0.12s; font-family: inherit; }
+.fb.on { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.fb:hover:not(.on) { border-color: #999; color: #444; }
+
+.si-wrap { margin-bottom: 1.3rem; }
+.si { width: 100%; padding: 0.65rem 1rem; border: 0.5px solid #e0e0d8; border-radius: 8px; font-size: 13px; background: #fff; color: #1a1a1a; outline: none; font-family: inherit; }
+.si:focus { border-color: #999; }
+.si::placeholder { color: #ccc; }
+
+.meta { font-size: 12px; color: #bbb; margin-bottom: 1.5rem; }
+.meta span { color: #777; font-weight: 500; }
+
+.gh { margin-bottom: 0.6rem; }
+.gh-top { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #bbb; margin-bottom: 0.15rem; }
+.gh-title { font-size: 13.5px; font-weight: 500; color: #444; margin-bottom: 0.1rem; }
+.gh-desc { font-size: 12px; color: #bbb; font-style: italic; }
+
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #e5e5de; border-radius: 10px; overflow: hidden; margin-bottom: 2.5rem; }
+.card { background: #fff; padding: 1rem 1.1rem 1.15rem; cursor: pointer; transition: background 0.1s; position: relative; }
+.card:hover { background: #f5f5f0; }
+.card.sel { background: #1a1a1a; }
+.card.sel .cw { color: #fff; }
+.card.sel .cn { color: #666; }
+.card.sel .cg { border-color: #333; color: #555; }
+.cw { font-family: Georgia, serif; font-size: 15.5px; color: #1a1a1a; line-height: 1.35; margin-bottom: 0.3rem; }
+.cg { display: inline-flex; font-size: 10px; padding: 0.08rem 0.5rem; border-radius: 10px; border: 0.5px solid #e5e5de; color: #c0c0b8; letter-spacing: 0.04em; margin-bottom: 0.3rem; }
+.cn { font-size: 11px; color: #aaa; line-height: 1.6; }
+.star-ic { position: absolute; top: 0.7rem; right: 0.8rem; font-size: 11px; color: #c8a96e; }
+
+/* SELECTED */
+.sel-panel { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e5de; display: none; }
+.sel-panel.show { display: block; }
+.sp-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.1rem; }
+.sp-ttl { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #bbb; }
+.sp-btns { display: flex; gap: 7px; }
+.sp-b { font-size: 11px; padding: 0.28rem 0.8rem; border-radius: 6px; border: 0.5px solid #ddd; background: #fff; cursor: pointer; color: #888; font-family: inherit; }
+.sp-b.p { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.sp-list { display: flex; flex-direction: column; gap: 1px; background: #e5e5de; border-radius: 10px; overflow: hidden; }
+.sp-row { background: #fff; padding: 0.75rem 1.2rem; display: grid; grid-template-columns: 1fr 100px 28px; align-items: center; gap: 8px; }
+.sp-w { font-family: Georgia, serif; font-size: 15.5px; color: #1a1a1a; }
+.sp-g { font-size: 11px; color: #bbb; font-style: italic; }
+.sp-x { font-size: 12px; color: #ccc; cursor: pointer; text-align: right; }
+.sp-x:hover { color: #888; }
+
+.empty { text-align: center; padding: 4rem 2rem; color: #ccc; font-size: 13px; display: none; }
+.empty.show { display: block; }
+
+@media (max-width: 680px) { .grid, .bench-grid { grid-template-columns: repeat(2,1fr); } h1 { font-size: 20px; } }
+@media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <div class="eye">VCB Private Banking · Tagline Selection</div>
+  <h1>Master Tagline List</h1>
+  <div class="sub">Click để chọn · Lọc theo nhóm · Danh sách đã chọn hiện bên dưới</div>
+</div>
+
+<!-- BENCHMARK -->
+<div class="bench-section">
+  <div class="bs-head">Benchmark — Tagline các ngân hàng & brand tài chính quốc tế</div>
+  <div class="bench-grid">
+    <div class="bcard saturated">
+      <div class="bc-bank">UBS</div>
+      <div class="bc-tag">"You &amp; us" / "Here today. Here tomorrow." / "We will not rest."</div>
+      <div class="bc-note">Framework "Liquidity. Longevity. Legacy." — thông minh nhưng nói bằng ngôn ngữ tài chính thuần túy.</div>
+      <div class="bc-verdict v-sat">Bão hòa</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">Julius Baer</div>
+      <div class="bc-tag">"Passion to Perform"</div>
+      <div class="bc-note">Performance-focused — nói về ngân hàng, không phải về KH. Legacy không xuất hiện trong tagline chính.</div>
+      <div class="bc-verdict v-sat">Bão hòa</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">Deutsche Bank</div>
+      <div class="bc-tag">"A Passion to Perform"</div>
+      <div class="bc-note">Gần giống Julius Baer — "passion to perform" là cụm bão hòa nhất trong private banking toàn cầu.</div>
+      <div class="bc-verdict v-sat">Bão hòa</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">Pictet</div>
+      <div class="bc-tag">"We are private bankers, not asset gatherers."</div>
+      <div class="bc-note">Positioning rõ nhưng là câu dài, không phải tagline ngắn. Pictet định vị qua hành động (Prix Pictet), không qua quảng cáo.</div>
+      <div class="bc-verdict v-sat">Không dùng tagline</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">Lombard Odier</div>
+      <div class="bc-tag">"Rethink everything"</div>
+      <div class="bc-note">Táo bạo hơn các đối thủ — nhưng vẫn thiếu chiều bản sắc cá nhân và di sản.</div>
+      <div class="bc-verdict v-sat">Trung bình</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">HSBC Private</div>
+      <div class="bc-tag">"The world's local bank"</div>
+      <div class="bc-note">Global scale — không nói về wealth hay legacy. Dành cho mass market hơn UHNW.</div>
+      <div class="bc-verdict v-sat">Bão hòa</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">JP Morgan Private</div>
+      <div class="bc-tag">"The right relationship is everything"</div>
+      <div class="bc-note">Nhấn vào relationship — đúng nhưng generic. Ai cũng nói "relationship".</div>
+      <div class="bc-verdict v-sat">Bão hòa</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">Citi Private Bank</div>
+      <div class="bc-tag">"A bank for those who shape the world"</div>
+      <div class="bc-note">Gần nhất với concept VCB Iconic — nhưng "shape the world" hơi đại ngôn và thiếu chiều bản sắc riêng.</div>
+      <div class="bc-verdict v-sat">Gần — nhưng global</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">Standard Chartered</div>
+      <div class="bc-tag">"Building a family legacy that lasts"</div>
+      <div class="bc-note">Mô tả dịch vụ — "building" và "lasts" là động từ hành động. Nhưng "legacy that lasts" quá literal.</div>
+      <div class="bc-verdict v-sat">Bão hòa</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">DBS Private</div>
+      <div class="bc-tag">"Live more, Bank less"</div>
+      <div class="bc-note">Thú vị nhưng thiếu chiều wealth và legacy — dành cho retail hơn UHNW.</div>
+      <div class="bc-verdict v-sat">Sai tệp</div>
+    </div>
+    <div class="bcard saturated">
+      <div class="bc-bank">Techcombank VN</div>
+      <div class="bc-tag">"Vượt trội mỗi ngày"</div>
+      <div class="bc-note">Mạnh nhất trong banking VN hiện tại — nhưng nhấn vào daily performance, không phải legacy.</div>
+      <div class="bc-verdict v-sat">Tốt — đang dùng</div>
+    </div>
+    <div class="bcard">
+      <div class="bc-bank">Khoảng trắng VCB</div>
+      <div class="bc-tag">Động từ mạnh + KH là chủ thể + bản sắc riêng</div>
+      <div class="bc-note">Không ai dùng "kiến tạo / định hình / trị vì" trong banking. Không ai kết hợp Hán Việt + action. Không ai đặt KH làm người viết luật chơi.</div>
+      <div class="bc-verdict v-gap">Khoảng trắng</div>
+    </div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <span class="tl">Nhóm:</span>
+  <button class="fb on" onclick="flt('all',this)">Tất cả</button>
+  <button class="fb" onclick="flt('A',this)">A — Xác lập</button>
+  <button class="fb" onclick="flt('B',this)">B — Định hình</button>
+  <button class="fb" onclick="flt('C',this)">C — Gìn giữ</button>
+  <button class="fb" onclick="flt('D',this)">D — Chinh phục</button>
+  <button class="fb" onclick="flt('E',this)">E — Khắc ghi</button>
+  <button class="fb" onclick="flt('F',this)">F — Bản sắc</button>
+  <button class="fb" onclick="flt('G',this)">G — Tương phản</button>
+  <button class="fb" onclick="flt('star',this)">★ Nổi bật</button>
+</div>
+<div class="si-wrap"><input class="si" type="text" placeholder="Tìm tagline..." oninput="srch(this.value)"></div>
+<div class="meta">Hiển thị <span id="cnt">0</span> tagline &nbsp;·&nbsp; <span id="scnt">0</span> đã chọn</div>
+
+<div id="main"></div>
+<div class="empty" id="emp">Không tìm thấy tagline phù hợp.</div>
+
+<div class="sel-panel" id="sp">
+  <div class="sp-top">
+    <div class="sp-ttl">Đã chọn (<span id="snum">0</span>)</div>
+    <div class="sp-btns">
+      <button class="sp-b" onclick="clrAll()">Xoá hết</button>
+      <button class="sp-b p" onclick="cpySel()">Copy danh sách</button>
+    </div>
+  </div>
+  <div class="sp-list" id="slist"></div>
+</div>
+</div>
+
+<script>
+const G = [
+  { id:'A', label:'Nhóm A', title:'Xác lập vị thế', desc:'"Tôi đã ở đây" — quyền lực tự nhiên, không cần tranh giành hay chứng minh.', items:[
+    { w:'TRỊ VÌ THỜI CUỘC', note:'"Trị vì" gợi người đứng trên mà không cần tuyên bố — quyền lực hiển nhiên. Chưa ai dùng trong banking.', star:true },
+    { w:'ĐỊNH HÌNH THỜI CUỘC', note:'Người không chạy theo — người tạo ra thời cuộc. Gần với Citi "shape the world" nhưng mạnh và ngắn hơn.', star:true },
+    { w:'XÁC LẬP THỜI ĐẠI', note:'Establish an era. Vị thế của người đặt nền móng, không của người theo sau.', star:true },
+    { w:'KHAI MỞ THỜI ĐẠI', note:'Người đến đầu tiên khi chưa có đường — founder energy.', star:false },
+    { w:'LẬP NÊN THỜI CUỘC', note:'Lập ra trật tự mà người khác sau đó theo.', star:false },
+  ]},
+  { id:'B', label:'Nhóm B', title:'Định hình / Kiến tạo', desc:'"Tôi là người viết luật chơi" — không theo quy tắc, tạo ra quy tắc.', items:[
+    { w:'KIẾN TẠO VƯỢT THỜI', note:'Timeless + action — xây dựng thứ vượt qua thời gian. Không ai trên thị trường đang dùng cụm này.', star:true },
+    { w:'ĐỊNH ĐOẠT THỜI CUỘC', note:'"Định đoạt" gợi quyền lực tuyệt đối. Người quyết định cuộc chơi, không phải người chơi.', star:true },
+    { w:'VẠCH LỐI THỜI ĐẠI', note:'"Vạch lối" — đi đầu, không theo ai, không cần bản đồ vì tự tạo ra đường.', star:true },
+    { w:'TẠO LẬP THỜI CUỘC', note:'Create + establish — hai lớp hành động. Không phản ứng với thời cuộc mà tạo ra nó.', star:true },
+    { w:'KIẾN LẬP VĨNH CỬU', note:'Build to last forever. Hành động và kết quả trong 4 chữ.', star:true },
+    { w:'VƯƠN TẦM THỜI CUỘC', note:'Upward — vươn lên trên thời cuộc, không bị cuốn vào vòng xoáy của nó.', star:false },
+    { w:'TẠO DỰNG THẾ KỶ', note:'Century-building. Chiều thời gian lớn nhất — nghĩ theo thế kỷ, không theo năm.', star:false },
+  ]},
+  { id:'C', label:'Nhóm C', title:'Gìn giữ & Truyền thừa', desc:'"Tôi đảm bảo nó sống mãi" — không chỉ xây dựng mà còn bảo hộ và truyền đi.', items:[
+    { w:'TRUYỀN DI BẢN SẮC', note:'Aligned term mới "truyền di" — bản sắc được chủ động truyền đi nguyên vẹn, không tự nhiên thất lạc.', star:true },
+    { w:'SÁNH VAI VĨNH CỬU', note:'Đồng hành + trường tồn — đứng ngang hàng với những thứ vượt thời gian.', star:true },
+    { w:'PHỤNG GIỮ BẢN SẮC', note:'"Phụng giữ" gợi sự tôn kính với thứ được giao phó — không giữ hộ mà gìn giữ vì trân trọng.', star:true },
+    { w:'GIAO THỪA THỜI ĐẠI', note:'"Giao thừa" — khoảnh khắc thiêng liêng của sự tiếp nối giữa hai thế hệ, không chỉ là trao đi.', star:true },
+    { w:'THỪA KẾ TẦM NHÌN', note:'Không chỉ thừa kế tài sản — thừa kế cả tầm nhìn, cốt cách của người đã xây.', star:false },
+    { w:'DẪN DẮT VĨNH CỬU', note:'Lead forever — sự dẫn dắt không bị giới hạn bởi thời gian, tiếp tục qua thế hệ.', star:false },
+  ]},
+  { id:'D', label:'Nhóm D', title:'Chinh phục & Làm chủ', desc:'"Bản năng người đứng đầu" — quyền lực không cần tuyên bố, tự hiển hiện.', items:[
+    { w:'ĐỨNG TRÊN THỜI CUỘC', note:'Mạnh nhất toàn list — gợi người không bị cuốn theo biến động. Đúng UHNW mindset. Không ai đang dùng.', star:true },
+    { w:'CHẾ NGỰ THỜI CUỘC', note:'"Chế ngự" — thế giới xoay vần, họ không bị cuốn. Quyền lực không cần tuyên bố.', star:true },
+    { w:'KHUẤT PHỤC THỜI GIAN', note:'Đảo ngược: không phải thời gian xóa nhòa họ — mà họ khuất phục thời gian.', star:true },
+    { w:'SONG BƯỚC VƯỢT THỜI', note:'Đồng hành + vượt thời gian — VCB và KH cùng kiến tạo thứ trường tồn.', star:false },
+    { w:'VƯỢT TẦM THỜI CUỘC', note:'Beyond the era — không thuộc về một thời điểm, thuộc về mọi thời đại.', star:true },
+    { w:'THỐNG LĨNH BẢN SẮC', note:'Lead bằng cốt cách — không phải sức mạnh mà bản sắc riêng không ai có.', star:false },
+  ]},
+  { id:'E', label:'Nhóm E', title:'Khắc ghi & Lưu lại', desc:'"Dấu ấn không xóa được" — hành động đã xong, kết quả còn mãi.', items:[
+    { w:'BẢN SẮC KHẮC GHI', note:'Bản sắc tự khắc ghi vào thời gian — không cần ai công nhận, không cần ai nhắc.', star:true },
+    { w:'KHẮC NÊN THỜI ĐẠI', note:'Sculpt an era — không sống trong thời đại mà tạo ra nó, như điêu khắc gia tạo tác phẩm vĩnh cửu.', star:true },
+    { w:'LƯU DANH VẠN THẾ', note:'"Lưu danh" không phải khoe khoang — lịch sử tự ghi nhận, không cần ai nhắc. Hán Việt đẹp.', star:true },
+    { w:'TẠC GHI LỊCH SỬ', note:'"Tạc" — khắc vào đá, không thể xóa nhòa theo năm tháng. Hành động mạnh và dứt khoát.', star:true },
+    { w:'KHẮC DẤU THỜI ĐẠI', note:'Engrave the era — thời đại mang dấu của họ, không phải ngược lại.', star:true },
+    { w:'IN DẤU TRƯỜNG TỒN', note:'Leave a mark that lasts — dấu ấn không phải tạm thời mà vĩnh cửu.', star:false },
+  ]},
+  { id:'F', label:'Nhóm F', title:'Bản sắc & Độc bản', desc:'"Chỉ có một, không thể sao chép" — /i/ concept, eikṓn, unique identity.', items:[
+    { w:'ĐỊNH HÌNH BẢN SẮC', note:'Chủ động kiến tạo bản sắc riêng — người định hình, không bị định hình bởi ai.', star:true },
+    { w:'ĐỘC BẢN VĨNH CỬU', note:'eikṓn — chỉ có một, không thể sao chép. Sang và không cần giải thích.', star:true },
+    { w:'SỐNG ĐÚNG BẢN SẮC', note:'Lifestyle statement — vượt ra ngoài banking language, gợi cách sống không chỉ tài chính.', star:true },
+    { w:'KIẾN CÔNG VẠN THẾ', note:'Xây công trình cho vạn thế — Hán Việt thuần, chiều triết học sâu nhất trong toàn list.', star:true },
+    { w:'BẢN SẮC ĐỊNH HÌNH', note:'Đảo vế — bản sắc là chủ thể định hình, không phải đối tượng bị định hình.', star:false },
+    { w:'VĨNH CỮU BẢN SẮC', note:'Eternal identity — bản sắc không lỗi thời, không thể xóa. Nhịp đảo tạo điểm nhấn.', star:false },
+    { w:'MỘT TÊN TRƯỜNG TỒN', note:'"Mang đúng một tên" — /i/ concept, bản sắc không ai có bản thứ hai.', star:false },
+  ]},
+  { id:'G', label:'Nhóm G', title:'Tương phản & Category break', desc:'"Chúng tôi không phải ngân hàng thông thường" — phá vỡ kỳ vọng, định vị khác biệt.', items:[
+    { w:'KHÔNG QUẢN LÝ. THẤU HIỂU.', note:'Phá vỡ category hoàn toàn — positioning sắc nhất, không ngân hàng nào dám nói vậy. Khác biệt thật sự.', star:true },
+    { w:'SÂU HƠN CON SỐ.', note:'Beyond numbers — aligned brand story, gợi được Total Wealth concept trong 4 chữ.', star:true },
+    { w:'HƠN CẢ NGÂN HÀNG.', note:'Category redefinition — táo bạo, tuyên bố vượt ra ngoài định nghĩa thông thường. Ai cũng hiểu ngay.', star:true },
+    { w:'KHÔNG PHỤC VỤ. SÁNH VAI.', note:'Positioning rõ nhất — không phục vụ mà đứng ngang hàng. Một câu đủ nói toàn bộ brand role.', star:true },
+    { w:'GIỮ LỬA NGÀN NĂM.', note:'Keep the flame — hình ảnh đẹp, gợi di sản như thứ đang sống chứ không phải được cất giữ.', star:true },
+  ]},
+];
+
+const GL = { A:'Nhóm A', B:'Nhóm B', C:'Nhóm C', D:'Nhóm D', E:'Nhóm E', F:'Nhóm F', G:'Nhóm G' };
+let sel = new Set(), cf = 'all', cs = '';
+
+function render() {
+  const main = document.getElementById('main');
+  const emp = document.getElementById('emp');
+  main.innerHTML = '';
+  let tot = 0;
+  G.forEach(g => {
+    const fi = g.items.filter(it => {
+      const mg = cf==='all' || cf===g.id || (cf==='star' && it.star);
+      const ms = cs==='' || it.w.toLowerCase().includes(cs.toLowerCase()) || it.note.toLowerCase().includes(cs.toLowerCase());
+      return mg && ms;
+    });
+    if (!fi.length) return;
+    tot += fi.length;
+    const head = document.createElement('div');
+    head.className = 'gh';
+    head.innerHTML = `<div class="gh-top">${g.label} — ${g.title}</div><div class="gh-desc">${g.desc}</div>`;
+    main.appendChild(head);
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    fi.forEach(it => {
+      const c = document.createElement('div');
+      c.className = 'card' + (sel.has(it.w) ? ' sel' : '');
+      c.onclick = () => tog(it.w);
+      c.innerHTML = (it.star ? '<span class="star-ic">★</span>' : '') +
+        `<div class="cw">${it.w}</div><span class="cg">${GL[g.id]}</span><span class="cn">${it.note}</span>`;
+      grid.appendChild(c);
+    });
+    main.appendChild(grid);
+  });
+  document.getElementById('cnt').textContent = tot;
+  emp.className = 'empty' + (tot===0 ? ' show' : '');
+}
+
+function tog(w) { sel.has(w) ? sel.delete(w) : sel.add(w); render(); rSel(); }
+
+function rSel() {
+  const sp = document.getElementById('sp');
+  const sl = document.getElementById('slist');
+  document.getElementById('snum').textContent = sel.size;
+  document.getElementById('scnt').textContent = sel.size;
+  if (!sel.size) { sp.classList.remove('show'); return; }
+  sp.classList.add('show');
+  sl.innerHTML = '';
+  sel.forEach(w => {
+    let gid = '';
+    G.forEach(g => { if (g.items.find(i => i.w===w)) gid = g.id; });
+    const r = document.createElement('div');
+    r.className = 'sp-row';
+    r.innerHTML = `<div class="sp-w">${w}</div><div class="sp-g">${GL[gid]||''}</div><div class="sp-x" onclick="rmv(this.dataset.w)" data-w="${w.replace(/"/g,'&quot;')}">✕</div>`;
+    sl.appendChild(r);
+  });
+}
+
+function rmv(w) { sel.delete(w); render(); rSel(); }
+function clrAll() { sel.clear(); render(); rSel(); }
+function cpySel() {
+  navigator.clipboard.writeText([...sel].join('\n')).then(() => {
+    const b = document.querySelector('.sp-b.p');
+    b.textContent = 'Đã copy!';
+    setTimeout(() => b.textContent = 'Copy danh sách', 1500);
+  });
+}
+function flt(g, el) { cf=g; document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on')); el.classList.add('on'); render(); }
+function srch(v) { cs=v; render(); }
+
+render(); rSel();
+</script>
+</body>
+</html>
